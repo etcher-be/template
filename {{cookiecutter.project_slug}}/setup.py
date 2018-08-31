@@ -63,7 +63,7 @@ setup(
     platforms=['win32'],
     url=r'https://github.com/etcher-be/{{ cookiecutter.project_slug }}',
     download_url=r'https://github.com/etcher-be/{{ cookiecutter.project_slug }}/releases',
-    description="{{ cookiecutter.project_short_description }}"
+    description="{{ cookiecutter.project_short_description }}",
     license='MIT',
     long_description=read_local_files('README.md'),
     packages=find_packages(),
