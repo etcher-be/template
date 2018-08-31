@@ -77,6 +77,11 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for 
 5. When you're done making changes, check that your changes pass linting and the
    tests::
 
+    $ python -m epab pp
+
+    This will run the test suite, verify all the linters pass, and update the requirements. Alternatively,
+    you can also run the following commands for more granular control:
+
     $ epab lint
     $ epab pytest -l
 
@@ -98,8 +103,9 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.md.
 
-	
+
 Deploying
 ---------
 
-Deploying happens automatically when changes are merged into master.
+Deploying happens automatically when changes are merged into master. Build artifacts are hosted for 6 months
+on Appveyor (follow the link from the Pull Request page).
