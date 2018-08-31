@@ -1,7 +1,6 @@
 # coding=utf-8
 
 import os
-import subprocess
 import sys
 from pathlib import Path
 
@@ -47,11 +46,11 @@ def _global_tear_down(tmpdir, monkeypatch):
         monkeypatch.delenv('APPVEYOR')
     except KeyError:
         pass
-	os_env = dict(os.environ)
+    os_env = dict(os.environ)
     current_dir = os.getcwd()
     folder = Path(tmpdir).absolute()
     os.chdir(folder)
     yield
     unstub()
     os.chdir(current_dir)
-	os.environ = os_env
+    os.environ = os_env
